@@ -101,14 +101,15 @@ class MailAdmin extends Admin
             $snappy = $container->get('knp_snappy.pdf');
 
             $snappy->generateFromHtml($bodyTest, $file, array(
-                    'lowquality' => false,
-                    'print-media-type' => true,
-                    'encoding' => 'utf-8',
-                    'page-size' => 'A5',
+                    'margin-bottom' => 0,
+                    'margin-left' => 0,
+                    'margin-right' => 0,
+                    'margin-top' => 0,
+                    //'lowquality' => false,
+                    'page-size' => 'A4',
                     'orientation'=>'Landscape',
-                    'outline-depth' => 8,
-                    'images' => true,
-                    'image-dpi' => 600,
+                    //'images' => true,
+                    //'image-dpi' => 600,
                 ), true);
 
             $message = \Swift_Message::newInstance()

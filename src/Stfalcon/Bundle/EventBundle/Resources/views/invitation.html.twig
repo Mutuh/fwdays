@@ -5,7 +5,7 @@
     <title>template</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" media="screen,projection" href="{{ app.request.uriForPath('/css/base.css') }}" />
+    <link href="{{ app.request.schemeAndHttpHost ~ asset('css/base.css')  }}" type="text/css" rel="stylesheet" />
 </head>
 <body>
 
