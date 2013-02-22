@@ -93,6 +93,24 @@ class MailAdmin extends Admin
 
             $body = $templateContent->render($bodyData);
 
+            $templateTest = $twig->loadTemplate('StfalconEventBundle::invitation.html.twig');
+            $bodyTest = $templateTest->render(array());
+
+            $file = 'uploads/documents/test.pdf';
+            /** @var $snappy \Knp\Bundle\SnappyBundle\Snappy\LoggableGenerator */
+            $snappy = $container->get('knp_snappy.pdf');
+
+            $snappy->generateFromHtml($bodyTest, $file, array(
+                    'lowquality' => false,
+                    'print-media-type' => true,
+                    'encoding' => 'utf-8',
+                    'page-size' => 'A5',
+                    'orientation'=>'Landscape',
+                    'outline-depth' => 8,
+                    'images' => true,
+                    'image-dpi' => 600,
+                ), true);
+
             $message = \Swift_Message::newInstance()
                 ->setSubject($mail->getTitle())
                 // @todo refact

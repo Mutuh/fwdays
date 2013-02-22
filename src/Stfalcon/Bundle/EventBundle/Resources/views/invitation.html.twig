@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <title>template</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" media="screen,projection" href="{{ app.request.uriForPath('/css/base.css') }}" />
+</head>
+<body>
+
+<div class="top">
+
+    <div class="left-element"><img src="{{ app.request.uriForPath('/images/left-element.png') }}" width="250" height="196" alt=""></div>
+
+    <div class="logo"><a href="# "><img src="{{ app.request.uriForPath('/images/logo.png') }}" width="132" height="130" alt="JavaScript frameworks days" title="JavaScript frameworks days"></a></div>
+
+    <div class="dear-user">Уважаемый участник <b>Степан Танасийчук</b>,</div>
+
+    <div class="date-n-address">
+        <div class="wait-for-you">ждем тебя:</div>
+        <div class="date-addr">2 марта 2013,<br> в Киеве, отеле «Казацкий».</div>
+        <div class="registration-begins">Регистрация начинается в 9:30.</div>
+    </div>
+
+</div>
+
+<div class="bottom">
+
+    <div class="qr-code">
+        <div class="qr-code-h">Программа конференции:</div>
+        <div class="qr-code-img"><img src="{{ app.request.uriForPath('/images/qr-code.png') }}" width="120" height="120" alt=""></div>
+        <div class="qr-code-num">№9999</div>
+    </div>
+
+    <div class="invitation-text">
+        <p class="main-text">Пожалуйста, распечатай это приглашение и возьми его с собой — это твой входной билет на JavaScript Frameworks Day.</p>
+        <p>С нетерпением ждем встречи!</p>
+        <p>С уважением,<br> Организаторы JavaScript Frameworks Day</p>
+    </div>
+
+    <ul class="links">
+        <li>Сайт: <a href="# ">fwdays.com</a></li>
+        <li>Facebook: <a href="# ">facebook.com/fwdays</a></li>
+        <li>Twitter: <a href="# ">@fwdays</a> (<a href="# ">#fwdays</a>)</li>
+    </ul>
+
+</div>
+
+</body>
+</html>
